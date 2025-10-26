@@ -9,7 +9,7 @@ int giveUpdatedAngle(int currentDialAngle)
    }
    else if (currentDialAngle > 360)
    {
-      return currentDialAngle - 360;
+      return currentDialAngle - 360; // ig curentDialAngle % 360 is better. Idea came to mind after submission.
    }
    else
    {
