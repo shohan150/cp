@@ -9,36 +9,23 @@ int main()
    if (3 * k == s)
    {
       cout << "1";
-      return 1;
+      return 0;
    }
 
    int count = 0;
-   for (int x = 0; (x <= k && x <= s); x++)
+   for (int x = 0; x <= k; x++)
    {
-      cout << "x" << x << " " << count << endl;
-      if (x == s)
+      // cout << "x" << x << " " << count << endl;
+      for (int y = 0; y <= k; y++)
       {
-         count++;
-         continue;
-      }
-      for (int y = 0; (y <= k && x + y <= s && x + y + k >= s); y++)
-      {
-         cout << x << y << endl;
-         if (x + y == s)
-         {
+         // cout << x << y << endl;
+         int z = (s - x - y);
+         // cout << x << y << z << endl;
+         if (z >= 0 && z <= k)
             count++;
-            continue;
-         }
-
-         for (int z = (s - x - y); z <= k; z++)
-         {
-            cout << x << y << z << endl;
-            if (x + y + z == s)
-               count++;
-         }
       }
    }
 
    cout << count;
-   return count;
+   return 0;
 }
